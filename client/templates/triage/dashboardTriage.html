@@ -1,0 +1,26 @@
+<template name="dashboardTriage">
+    {{#ionNavView}}
+        {{#contentFor "headerTitle"}}
+            <h1 class="title">Triage Dashboard</h1>
+        {{/contentFor}}
+        {{#contentFor "headerButtonLeft"}}
+            <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+                {{#if isAndroid}}
+                    {{> ionIcon icon='android-more-vertical'}}
+                {{else}}
+                    {{> ionIcon icon='navicon'}}
+                {{/if}}
+            </button>
+        {{/contentFor}}
+        {{#ionView}}
+            {{#ionContent}}
+                <div class="row responsive-lg">
+                    <div class="patientName">Patient Demographics</div>
+                    <div class="video">Patient video</div>
+                    <div class="vitals">Patient Vitals</div>
+                </div>
+
+            {{/ionContent}}
+        {{/ionView}}
+    {{/ionNavView}}
+</template>

@@ -1,0 +1,34 @@
+<template name="appLayout">
+    {{#ionBody}}
+        {{#ionSideMenuContainer}}
+            {{#ionSideMenus}}
+                {{#ionSideMenu side="left"}}
+                    <a class="bar bar-header bar-dark" href="{{pathFor route="home"}}" data-ion-menu-close>
+                        <h1 class="title">Patient List</h1>
+                    </a>
+                    <div class="content has-header">
+                        <div class="list">
+                            <a class="item item-icon-left" href="{{pathFor route="profile"}}" data-ion-menu-close>
+                                {{> ionIcon icon="person"}}
+                                Nancy Test Patient
+                            </a>
+                            <a class="item item-icon-left" href="{{pathFor route="vcard"}}" data-ion-menu-close>
+                                {{> ionIcon icon="person"}}
+                                Steve Test Patient
+                            </a>
+                        </div>
+                    </div>
+                {{/ionSideMenu}}
+                {{#ionSideMenuContent}}
+                    {{#ionNavView}}
+                        {{> ionNavBar class="bar bar-dark"}}
+                    {{/ionNavView}}
+
+                    {{#ionView}}
+                        {{> yield}}
+                    {{/ionView}}
+                {{/ionSideMenuContent}}
+            {{/ionSideMenus}}
+        {{/ionSideMenuContainer}}
+    {{/ionBody}}
+</template>

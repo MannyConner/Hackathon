@@ -1,0 +1,27 @@
+<template name="patient">
+    {{#ionNavView}}
+        {{#contentFor "headerTitle"}}
+            <h1 class="title">Patient</h1>
+        {{/contentFor}}
+
+        {{#ionView}}
+            {{#ionContent}}
+                {{#ionItem}}
+                    <div class="list card">
+                        <div class="item item-divider">
+                            <h2>Request HELP!!</h2>
+                        </div>
+                        <a href="#" class="item item-icon left">
+                            {{> ionIcon icon='medkit'}}
+                            72 year-old Female
+                            Chest Pain - needs AED
+                        </a>
+                        <button class="button button-block button-assertive">
+                            VIEW DETAILS
+                        </button>
+                    </div>
+                {{/ionItem}}
+            {{/ionContent}}
+        {{/ionView}}
+    {{/ionNavView}}
+</template>

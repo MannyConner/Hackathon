@@ -1,0 +1,1 @@
+PatientList = new Mongo.Collection('patientList');

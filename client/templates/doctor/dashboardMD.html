@@ -1,0 +1,20 @@
+<template name="dashboardMD">
+    {{#ionNavView}}
+        {{#contentFor "headerTitle"}}
+            <h1 class="title">Physician Dashboard</h1>
+        {{/contentFor}}
+        {{#contentFor "headerButtonLeft"}}
+            <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+                {{#if isAndroid}}
+                    {{> ionIcon icon='android-more-vertical'}}
+                {{else}}
+                    {{> ionIcon icon='navicon'}}
+                {{/if}}
+            </button>
+        {{/contentFor}}
+        {{#ionView}}
+            {{#ionContent}}
+            {{/ionContent}}
+        {{/ionView}}
+    {{/ionNavView}}
+</template>

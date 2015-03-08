@@ -1,0 +1,10 @@
+<template name="patientLayout">
+    {{#ionBody}}
+        {{#ionNavView}}
+            {{> ionNavBar class="bar bar-dark"}}
+        {{/ionNavView}}
+        {{#ionView}}
+            {{> yield}}
+        {{/ionView}}
+    {{/ionBody}}
+</template>
